@@ -1,0 +1,154 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgba(246, 235, 204, 0.7529411765);
+}
+
+a {
+  color: inherit !important;
+}
+
+footer {
+  border-top: 1px solid grey;
+  margin-top: 1%;
+  background-color: #cac7a8 !important;
+}
+
+.navbar {
+  background-color: #cac7a8 !important;
+  padding: 1.5em;
+}
+
+#google-map {
+  text-align: center;
+  width: 100%;
+  min-height: 30%;
+}
+
+#google-map iframe {
+  width: 70%;
+  min-height: 50%;
+}
+
+.row {
+  margin: 5% 10%;
+}
+
+hr {
+  width: 70%;
+}
+
+@media only screen and (min-width: 992px) {
+  .fill {
+    position: relative;
+    border-color: #5C4033;
+    padding: 1em;
+    padding-left: 1.2em !important;
+    padding-right: 1.2em !important;
+    margin-left: 2em;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #383736;
+    border: 2px #383736 solid;
+    border-radius: 4px;
+    text-transform: uppercase;
+    outline: 0;
+    overflow: hidden;
+    background: none;
+    z-index: 1;
+    cursor: pointer;
+    transition: 0.08s ease-in;
+    -o-transition: 0.08s ease-in;
+    -ms-transition: 0.08s ease-in;
+    -moz-transition: 0.08s ease-in;
+    -webkit-transition: 0.08s ease-in;
+  }
+  .fill :hover {
+    color: whitesmoke !important;
+  }
+  .fill :before {
+    content: "";
+    position: absolute;
+    background: #383736;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    -webkit-transition: top 0.09s ease-in;
+  }
+  .fill :hover:before {
+    top: 0;
+  }
+  .fill > a {
+    text-decoration: none;
+  }
+}
+.underline {
+  margin: 0em 2em;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: large;
+  font-style: normal;
+  text-decoration: none;
+  position: relative;
+}
+.underline :hover {
+  color: #000;
+}
+.underline :focus, .underline :hover {
+  color: black !important;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.navbar-brand {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: x-large;
+  font-style: italic;
+}
+
+.link--herse {
+  font-family: freight-display-pro, serif;
+  font-size: 1.375rem;
+  font-weight: bold;
+}
+
+.link__graphic--arc {
+  top: 73%;
+  left: -23%;
+}
+
+.link__graphic--arc path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.link:hover .link__graphic--arc path {
+  stroke-dashoffset: 0;
+  transition-timing-function: cubic-bezier(0.8, 1, 0.7, 1);
+  transition-duration: 0.3s;
+}
+
+.underline::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.underline:hover::before {
+  transform: scaleX(1);
+}/*# sourceMappingURL=main.css.map */
