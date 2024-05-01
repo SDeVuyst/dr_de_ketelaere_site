@@ -1,6 +1,6 @@
 $BACKGROUND_COLOR: #FFF2D7;
 $SECONDARY_COLOR: #FFF2D7;
-$ACCENT_COLOR: #5C4033;
+$ACCENT_COLOR: #383736;
 
 html {
     scroll-behavior: smooth;
@@ -26,6 +26,9 @@ footer {
 .navbar {
     background-color: $SECONDARY_COLOR !important;
     padding: 1.5em;
+}
+.col {
+    text-align: justify;
 }
 
 #google-map {
@@ -63,26 +66,87 @@ hr {
     background: none;
 }
 
+.full-width {
+    width: 100% !important;
+    margin: auto 0;
+}
+
+
+.btnAfspraak {
+    position: relative;
+    padding: 1em; 
+    padding-left: 1.2em !important;
+    padding-right: 1.2em !important;
+    
+    margin-left: 2em;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: whitesmoke;
+    border: 2px $ACCENT_COLOR solid;
+    border-radius: 4px;
+    text-transform: uppercase;
+    outline: 0;
+    overflow:hidden;
+    background: $ACCENT_COLOR;
+    z-index: 1;
+    cursor: pointer;
+    transition:         0.08s ease-in;
+    -o-transition:      0.08s ease-in;
+    -ms-transition:     0.08s ease-in;
+    -moz-transition:    0.08s ease-in;
+    -webkit-transition: 0.08s ease-in;
+
+    :hover {
+        color: $ACCENT_COLOR !important;
+    }
+
+    :before {
+        content: "";
+        position: absolute;
+        background: $BACKGROUND_COLOR;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 100%;
+        z-index: -1;
+        -webkit-transition: top 0.09s ease-in;
+    }
+
+    :hover:before {
+        top: 0;
+    }
+
+    > a {
+        text-decoration: none;
+    }
+
+}
+
+.img-fluid {
+    margin-right: 5rem;
+    margin-bottom: 2rem;
+}
+
+.col-md > p {
+    margin-bottom: 2rem;
+}
+
+
 @media only screen and (min-width: 992px) {
 
     .fill {
         position: relative;
-        border-color: $ACCENT_COLOR;
         padding: 1em; 
         padding-left: 1.2em !important;
         padding-right: 1.2em !important;
         
         margin-left: 2em;
-        //display:block;
-        // height: 45px;
-        // width: 150px;
-        // margin: 10px 7px;
-        // padding: 5px 5px;
         font-weight: 700;
         font-size: 15px;
         letter-spacing: 2px;
-        color: #383736;
-        border: 2px #383736 solid;
+        color: $ACCENT_COLOR;
+        border: 2px $ACCENT_COLOR solid;
         border-radius: 4px;
         text-transform: uppercase;
         outline: 0;
@@ -103,7 +167,7 @@ hr {
         :before {
             content: "";
             position: absolute;
-            background: #383736;
+            background: $ACCENT_COLOR;
             bottom: 0;
             left: 0;
             right: 0;

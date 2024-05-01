@@ -24,6 +24,10 @@ footer {
   padding: 1.5em;
 }
 
+.col {
+  text-align: justify;
+}
+
 #google-map {
   position: relative;
   overflow: hidden;
@@ -59,10 +63,68 @@ hr {
   background: none;
 }
 
+.full-width {
+  width: 100% !important;
+  margin: auto 0;
+}
+
+.btnAfspraak {
+  position: relative;
+  padding: 1em;
+  padding-left: 1.2em !important;
+  padding-right: 1.2em !important;
+  margin-left: 2em;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: whitesmoke;
+  border: 2px #383736 solid;
+  border-radius: 4px;
+  text-transform: uppercase;
+  outline: 0;
+  overflow: hidden;
+  background: #383736;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.08s ease-in;
+  -o-transition: 0.08s ease-in;
+  -ms-transition: 0.08s ease-in;
+  -moz-transition: 0.08s ease-in;
+  -webkit-transition: 0.08s ease-in;
+}
+.btnAfspraak :hover {
+  color: #383736 !important;
+}
+.btnAfspraak :before {
+  content: "";
+  position: absolute;
+  background: #FFF2D7;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 100%;
+  z-index: -1;
+  -webkit-transition: top 0.09s ease-in;
+}
+.btnAfspraak :hover:before {
+  top: 0;
+}
+.btnAfspraak > a {
+  text-decoration: none;
+}
+
+.img-fluid {
+  margin-right: 5rem;
+  margin-bottom: 2rem;
+}
+
+.col-md > p {
+  margin-bottom: 2rem;
+}
+
 @media only screen and (min-width: 992px) {
   .fill {
     position: relative;
-    border-color: #5C4033;
     padding: 1em;
     padding-left: 1.2em !important;
     padding-right: 1.2em !important;
