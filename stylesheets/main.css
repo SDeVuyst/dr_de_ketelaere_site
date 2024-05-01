@@ -3,7 +3,10 @@ html {
 }
 
 body {
-  background-color: rgba(246, 235, 204, 0.7529411765);
+  background-color: #FFF2D7;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -12,24 +15,35 @@ a {
 
 footer {
   border-top: 1px solid grey;
-  margin-top: 1%;
-  background-color: #cac7a8 !important;
+  margin-top: auto;
+  background-color: #FFF2D7 !important;
 }
 
 .navbar {
-  background-color: #cac7a8 !important;
+  background-color: #FFF2D7 !important;
   padding: 1.5em;
 }
 
 #google-map {
-  text-align: center;
+  position: relative;
+  overflow: hidden;
   width: 100%;
-  min-height: 30%;
+  padding-top: 56.25%;
+  margin: 0 auto;
+  float: left;
+  text-align: center;
 }
 
 #google-map iframe {
-  width: 70%;
-  min-height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 .row {
@@ -38,6 +52,11 @@ footer {
 
 hr {
   width: 70%;
+}
+
+#afspraakbutton.hide_button {
+  border: none;
+  background: none;
 }
 
 @media only screen and (min-width: 992px) {
