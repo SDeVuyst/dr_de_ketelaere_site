@@ -11,6 +11,11 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 a {
@@ -130,6 +135,7 @@ hr {
 
 .col-md > p {
     margin-bottom: 2rem;
+    font-size: large;
 }
 
 
