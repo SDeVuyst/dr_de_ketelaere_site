@@ -11,6 +11,8 @@
 
         <link rel="icon" href="/images/stethoscope.png" id="light-scheme-icon">
         <link rel="icon" href="/images/stethoscope.png" id="dark-scheme-icon">
+
+        <script src="/js/book_popup.js"></script>
     </head>
     <body>
 
@@ -45,7 +47,7 @@
                     </li>
                     
                     <li class="nav-item d-flex justify-content-center align-items-center">
-                        <button id="afspraakbutton"><a id="afspraaka" href="https://cal.com/drdeketelaere/">AFSPRAAK MAKEN</a></button>
+                        <button data-cal-link="drdeketelaere" id="afspraakbutton"><span id="afspraaka">AFSPRAAK MAKEN</span></button>
                     </li>
                 </div>
             </div>
@@ -79,7 +81,7 @@
                 </p> 
             </div>
             <div class="col-md mx-auto d-flex justify-content-center align-items-center">
-                <button class="btnAfspraak"><a href="https://cal.com/drdeketelaere/">AFSPRAAK MAKEN</a></button>
+                <button data-cal-link="drdeketelaere" class="btnAfspraak"><span id="afspraaka">AFSPRAAK MAKEN</span></button>
             </div>
         </div>
 
