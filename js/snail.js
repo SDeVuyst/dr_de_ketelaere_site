@@ -1,18 +1,17 @@
-document.addEventListener("DOMContentLoaded", function(event) {
+const animationDuration = 2000; // in milliseconds
+
+function snailRoute() {
     var image = document.querySelector('.slak-image');
     var snail = document.querySelector('.slak');
     
     var imageRect = image.getBoundingClientRect();
     var snailRect = snail.getBoundingClientRect();
 
-    var animationDuration = 2000; // in milliseconds
-    snail.style.transitionDuration = animationDuration + "ms";
-
     function crawlLeftToRight() {
 
+        snail.style.transitionDuration = animationDuration + "ms";
         snail.style.transform = "translateX(" + imageRect.width + "px)";
         
-
         snail.addEventListener('transitionend', async function(event) {
             // Check if the transition property that ended is the one you're interested in
             if (event.propertyName === 'transform') {
@@ -63,15 +62,35 @@ document.addEventListener("DOMContentLoaded", function(event) {
             // Check if the transition property that ended is the one you're interested in
             if (event.propertyName === 'transform') {
                 snail.style.transitionDuration = animationDuration/4 + "ms";
-                snail.style.transform = "translateX(" + -snailRect.width +"px) rotate(0deg)"
-                setTimeout(crawlLeftToRight, animationDuration/4 + 20)
+                snail.style.transform = "translateX(" + -snailRect.width +"px) rotate(360deg)"
+                setTimeout(resetCycle, animationDuration/4 + 20)
             }
         });
     }
 
+    function resetCycle() {
+        snail.style.transitionDuration = "0ms";
+        snail.style.transform = "translateX(" + -snailRect.width +"px)"
+        
+        setTimeout(crawlLeftToRight, animationDuration/4);
 
+    }
+
+    console.log("called")
     crawlLeftToRight();
+};
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    snailRoute()
 });
+
+window.addEventListener('resize', function(event) {
+    snail.style.transitionDuration = "0ms";
+    snail.style.transform = "";
+
+    snailRoute();
+})
 
 
 function timeout(ms) {
