@@ -80,13 +80,21 @@
                     Het vaste telefoonnummer is buiten werking. In het weekend kan u de huisartsenwachtpost contacteren via <a href="tel:1733">1733</a>.
                 </p> 
             </div>
-            <div class="col-md mx-auto d-flex justify-content-center align-items-center">
-                <button data-cal-link="drdeketelaere" class="btnAfspraak"><span id="afspraaka">AFSPRAAK MAKEN</span></button>
+            <div class="button-container col-md mx-auto d-flex justify-content-center align-items-center">
+                <button data-cal-link="drdeketelaere" class="btnAfspraak">
+                    <span id="afspraaka">AFSPRAAK MAKEN</span>
+                </button>
+                <div class="svg-wrapper">
+                    <svg id="afspraak-svg" class="reset-transition">
+                        <polygon points="100,10 40,198 190,78 10,78 160,198"
+                        style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+                    </svg>
+                </div>
             </div>
         </div>
 
         <hr class="my-3 mx-auto">
-
+        
         <div id="contact" class="row align-items-center">
             <div class="col-md">   
                 <img class="img-fluid" src="https://source.unsplash.com/user/c_v_r">     
@@ -100,7 +108,12 @@
             </div>
         </div>
 
-        <hr class="my-3 mx-auto">
+        <div class="slak-container">
+            <hr class="my-3 mx-auto" id="hr-line">
+            <svg id="moving-svg">
+                <circle cx="10" cy="50" r="5" fill="red" />
+            </svg>
+        </div>
 
         <div id="betaling" class="row align-items-center">
             <div class="col-md">
@@ -126,7 +139,7 @@
             </div>
             <div class="col-md">   
                 <p>
-                   De thuisraadplegingen gaan door in de Torhoutsensteenweg 441, Zedelgem. Er zijn parkeerplaatsen voorzien.
+                   De thuisraadplegingen gaan door in de Torhoutsesteenweg 441, Zedelgem. Er zijn parkeerplaatsen voorzien.
                    De ziekenhuisconsultaties gaan door in AZ Delta campus Torhout, Rembertlaan 21.
                 </p> 
             </div>

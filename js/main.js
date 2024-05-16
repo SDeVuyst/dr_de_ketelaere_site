@@ -59,3 +59,29 @@ function onUpdate() {
   matcher = window.matchMedia('(prefers-color-scheme: dark)');
   matcher.addListener(onUpdate);
   onUpdate();
+
+
+const buttonWrapper = document.querySelector('.button-container');
+
+buttonWrapper.addEventListener('mouseenter', function() {
+    buttonWrapper.classList.remove('reset-transition');
+    buttonWrapper.classList.add('hovered');
+});
+
+buttonWrapper.addEventListener('mouseleave', function() {
+    buttonWrapper.classList.remove('hovered');
+    buttonWrapper.classList.add('reset-transition');
+});
+
+
+// Get reference to the HR element and SVG
+const hrLine = document.getElementById('hr-line');
+const movingSVG = document.getElementById('moving-svg');
+
+// Set the SVG's top position to match the HR's top position
+movingSVG.style.top = hrLine.offsetTop + 'px';
+
+// Update SVG's position when the window is resized
+window.addEventListener('resize', function() {
+    movingSVG.style.top = hrLine.offsetTop + 'px';
+});

@@ -11,6 +11,7 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+  width: 100%;
 }
 
 a {
@@ -88,7 +89,7 @@ hr {
   outline: 0;
   overflow: hidden;
   background: #383736;
-  z-index: 1;
+  z-index: 2;
   cursor: pointer;
   transition: 0.08s ease-in;
   -o-transition: 0.08s ease-in;
@@ -237,4 +238,76 @@ hr {
 
 .underline:hover::before {
   transform: scaleX(1);
+}
+
+.button-container {
+  position: relative;
+}
+
+.svg-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden; /* Hides the part of the SVG that sticks out */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* Ensures the SVG is below the button */
+}
+
+#afspraak-svg {
+  width: 100px;
+  height: 100px;
+  transition: transform 0.75s ease-in;
+}
+
+.reset-transition {
+  transition-duration: 0.75s; /* Reset transition duration when button is not hovered */
+}
+
+.button-container:hover #afspraak-svg {
+  transform: translate(0%, -50%); /* Move the SVG up by adjusting the translateY value */
+}
+
+.button-container.hovered #afspraak-svg {
+  transition-duration: 0.2s; /* Transition duration when button is hovered */
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+.slak-container {
+  width: 80%; /* Adjust the width of the container as needed */
+  margin: 0 auto; /* Center the container horizontally */
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+/* Define initial position for the SVG */
+#moving-svg {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 15vw; /* Set the width explicitly */
+  height: 15vw; /* Set the height explicitly */
+  transform: translateY(-50%);
+  animation: moveAlongHr 120s linear infinite; /* Animation for moving along HR */
+}
+
+/* Define keyframes for the movement */
+@keyframes moveAlongHr {
+  0% {
+    left: 20%;
+  }
+  50% {
+    left: 80%;
+  }
+  100% {
+    left: 20%;
+  }
 }/*# sourceMappingURL=main.css.map */
