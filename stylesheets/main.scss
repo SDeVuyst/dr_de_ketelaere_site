@@ -1,4 +1,4 @@
-$BACKGROUND_COLOR: #d8eded;
+$BACKGROUND_COLOR: hsl(0, 0%, 96%);
 $ACCENT_COLOR: #383736;
 
 html {
@@ -31,7 +31,7 @@ footer {
 }
 
 .navbar {
-    background-color: $BACKGROUND_COLOR !important;
+    background-color: #fafafa !important;
     padding: 1.5em;
 }
 .col {

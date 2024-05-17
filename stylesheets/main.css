@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color: #d8eded;
+  background-color: hsl(0, 0%, 96%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -23,11 +23,11 @@ footer {
   overflow: hidden;
   border-top: 1px solid grey;
   margin-top: auto;
-  background-color: #d8eded !important;
+  background-color: hsl(0, 0%, 96%) !important;
 }
 
 .navbar {
-  background-color: #d8eded !important;
+  background-color: #fafafa !important;
   padding: 1.5em;
 }
 
@@ -105,7 +105,7 @@ hr {
 .btnAfspraak :before {
   content: "";
   position: absolute;
-  background: #d8eded;
+  background: hsl(0, 0%, 96%);
   bottom: 0;
   left: 0;
   right: 0;
