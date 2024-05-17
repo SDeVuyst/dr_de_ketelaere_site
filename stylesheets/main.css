@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background-color: #FFF2D7;
+  background-color: #d8eded;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,13 +19,15 @@ a {
 }
 
 footer {
+  position: relative;
+  overflow: hidden;
   border-top: 1px solid grey;
   margin-top: auto;
-  background-color: #FFF2D7 !important;
+  background-color: #d8eded !important;
 }
 
 .navbar {
-  background-color: #FFF2D7 !important;
+  background-color: #d8eded !important;
   padding: 1.5em;
 }
 
@@ -103,7 +105,7 @@ hr {
 .btnAfspraak :before {
   content: "";
   position: absolute;
-  background: #FFF2D7;
+  background: #d8eded;
   bottom: 0;
   left: 0;
   right: 0;
@@ -129,6 +131,9 @@ hr {
 }
 
 @media only screen and (min-width: 992px) {
+  #giraf {
+    height: 25vh !important;
+  }
   .fill {
     position: relative;
     padding: 1em;
@@ -254,11 +259,13 @@ hr {
   justify-content: center;
   align-items: center;
   z-index: 1; /* Ensures the SVG is below the button */
+  padding-top: 5%;
 }
 
-#afspraak-svg {
-  width: 100px;
-  height: 100px;
+#giraf {
+  padding-left: 8em;
+  height: 20vh;
+  transform: translate(0%, 35%);
   transition: transform 0.75s ease-in;
 }
 
@@ -266,39 +273,27 @@ hr {
   transition-duration: 0.75s; /* Reset transition duration when button is not hovered */
 }
 
-.button-container:hover #afspraak-svg {
-  transform: translate(0%, -50%); /* Move the SVG up by adjusting the translateY value */
+.button-container:hover #giraf {
+  transform: translate(0%, -5%); /* Move the SVG up by adjusting the translateY value */
 }
 
-.button-container.hovered #afspraak-svg {
+.button-container.hovered #giraf {
   transition-duration: 0.2s; /* Transition duration when button is hovered */
 }
 
-@keyframes moveUpDown {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-}
-.slak-container {
-  position: relative;
-  width: auto; /* Adjust this according to your image size */
-  height: auto; /* Adjust this according to your image size */
-}
-
-.slak-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
 .slak {
-  z-index: 2;
-  top: -50px; /* Adjust the distance above the image */
-  left: 0;
-  width: 50px; /* Adjust the size of your SVG */
-  height: 50px; /* Adjust the size of your SVG */
-  transition: transform ease-in-out;
+  position: absolute;
+  bottom: 0;
+  left: -100px; /* start just off-screen */
+  height: 50px; /* adjust based on your image size */
+  animation: crawl 20s linear infinite;
+}
+
+@keyframes crawl {
+  from {
+    left: -100px; /* start just off-screen */
+  }
+  to {
+    left: 100%; /* end just off-screen on the other side */
+  }
 }/*# sourceMappingURL=main.css.map */
