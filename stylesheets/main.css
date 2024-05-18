@@ -130,6 +130,10 @@ hr {
   font-size: large;
 }
 
+.title {
+  padding-bottom: 1em;
+}
+
 @media screen and (max-width: 991px) {
   p {
     text-align: justify-end;
