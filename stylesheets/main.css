@@ -45,6 +45,10 @@ footer {
   text-align: center;
 }
 
+#map {
+  padding-bottom: 3em !important;
+}
+
 #google-map iframe {
   position: absolute;
   top: 0;
@@ -128,6 +132,8 @@ hr {
 .col-md > p {
   margin-bottom: 2rem;
   font-size: large;
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .title {
@@ -139,7 +145,16 @@ hr {
     text-align: justify-end;
   }
 }
+@media screen and (max-width: 767px) {
+  .title {
+    text-align: center !important;
+  }
+}
 @media only screen and (min-width: 992px) {
+  .textcol {
+    padding-left: 5em;
+    padding-right: 5em;
+  }
   #giraf {
     height: 25vh !important;
   }
