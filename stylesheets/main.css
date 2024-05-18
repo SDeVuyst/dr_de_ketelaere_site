@@ -130,6 +130,11 @@ hr {
   font-size: large;
 }
 
+@media screen and (max-width: 991px) {
+  p {
+    text-align: justify-end;
+  }
+}
 @media only screen and (min-width: 992px) {
   #giraf {
     height: 25vh !important;
